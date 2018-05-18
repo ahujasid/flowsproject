@@ -68,9 +68,7 @@ class FlowsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_flow
-      @company = Company.find(params[:id]) 
-      @category = Category.find(params[:id])
-      @flow = Flow.find(params[:id])    
+      @flow = Flow.friendly.find(params[:id])    
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
