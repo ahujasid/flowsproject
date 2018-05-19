@@ -4,8 +4,8 @@ class FlowsController < ApplicationController
   # GET /flows
   # GET /flows.json
   def index
-    @company = Company.all
-    @category = Category.all
+    @companies = Company.all
+    @categories = Category.all
     @flows = Flow.all
   end
 
@@ -71,7 +71,6 @@ class FlowsController < ApplicationController
     def set_flow
       @flow = Flow.friendly.find(params[:id])    
     end
-
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flow_params

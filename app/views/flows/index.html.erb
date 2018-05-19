@@ -3,6 +3,11 @@
 <h1>Flows</h1>
 
 
+    <% @categories.each do |category| %>
+      <%= link_to category.name, root_path %> <br>
+    <% end %>
+    <br><br>
+
     <% @flows.each do |flow| %>
       
        <%= image_tag flow.thumbnail_img if !flow.thumbnail_img.nil? %><br>
@@ -10,7 +15,7 @@
         <%= image_tag flow.company.logo %>
         <%= flow.company.name %><br><br>
         
-        <%= link_to 'Show', flow %>
+        <%= link_to 'Show', show_flow_path(flow) %>
         <%= link_to 'Edit', edit_flow_path(flow) %>
         <%= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br><br><br>
