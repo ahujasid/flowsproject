@@ -12,6 +12,7 @@ class FlowsController < ApplicationController
   # GET /flows/1
   # GET /flows/1.json
   def show
+
   end
 
   # GET /flows/new
@@ -70,6 +71,7 @@ class FlowsController < ApplicationController
     def set_flow
       @flow = Flow.friendly.find(params[:id])    
     end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flow_params
