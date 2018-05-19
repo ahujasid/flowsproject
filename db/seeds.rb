@@ -7,20 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-2.times do |category|
+3.times do |categ|
 
 	Category.create!(
-		name: "Category {category}"
+		name: "Category #{categ}"
 		)
 end
 
 
 
-2.times do |company|
+3.times do |comp|
 
 	Company.create!(
-		name: "Company {company}",
-		logo: "http://via.placeholder.com/50x50"
+		name: "Company #{comp}",
+		logo: "http://via.placeholder.com/24x24"
 		)
 
 end
