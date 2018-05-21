@@ -1,0 +1,16 @@
+
+<% @flows.each do |flow| %>
+	<%if flow.category_id == cat %>
+		<%= image_tag flow.thumbnail_img if !flow.thumbnail_img.nil? %><br>
+		        <%= flow.name %><br>
+		        <%= image_tag flow.company.logo %>
+		        <%= flow.company.name %><br><br>
+		        
+		        <%= link_to 'Show', show_flow_path(flow) %>
+		        <%= link_to 'Edit', edit_flow_path(flow) %>
+		        <%= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %>
+		        <br><br><br>
+	<% end %>
+<% end %>
+
+</div>

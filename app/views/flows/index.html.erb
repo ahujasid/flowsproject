@@ -7,8 +7,9 @@
       <%= link_to category.name, root_path %> <br>
     <% end %>
     <br><br>
-
+ <!--
     <% @flows.each do |flow| %>
+      
       
        <%= image_tag flow.thumbnail_img if !flow.thumbnail_img.nil? %><br>
         <%= flow.name %><br>
@@ -19,7 +20,10 @@
         <%= link_to 'Edit', edit_flow_path(flow) %>
         <%= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br><br><br>
+     
     <% end %>
+       -->
+       <%= render "shared/flows_by_category", cat: 1 %>
 <br><br><br>
 
 <%= link_to 'New Flow', new_flow_path %>
