@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_17_152248) do
+ActiveRecord::Schema.define(version: 2018_05_22_165346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(version: 2018_05_17_152248) do
     t.string "logo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "bgcolor"
   end
 
   create_table "flows", force: :cascade do |t|
     t.string "name"
     t.text "tags"
     t.string "thumbnail_img"
-    t.integer "no_of_images"
     t.string "screen"
     t.text "images"
     t.bigint "company_id"
