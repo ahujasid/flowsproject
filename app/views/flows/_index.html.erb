@@ -1,6 +1,6 @@
 
 <% @flows.each do |flow| %>
-	<%if flow.category_id == cat %>
+	<%if flow.category_id != cat_id %>
 		<%= image_tag flow.thumbnail_img if !flow.thumbnail_img.nil? %><br>
 		        <%= flow.name %><br>
 		        <%= image_tag flow.company.logo %>
@@ -12,5 +12,3 @@
 		        <br><br><br>
 	<% end %>
 <% end %>
-
-</div>
