@@ -1,15 +1,21 @@
-<%= stylesheet_link_tag "master" %>
+<div class = "container">
 
-<p id="notice"><%= notice %></p>
+	<div class="header">
+		<div class="flows-logo"><%= image_tag "http://via.placeholder.com/50x24" %></div>
+		<div class="nav-link push">Home</div>
+		<div class="nav-link">About</div>
+	</div>
 
-<p class="header1">Flows</p>
-
-
+	<div class="menu">
     <% @categories.each do |category| %>
-      <%= link_to category.name, root_path %> <br>
+      <span class="category"><%= link_to category.name, root_path %></span>
     <% end %>
-    <br><br>
-       <%= render "index", cat_id: 1 %>
-<br><br><br>
+  </div>
 
-<%= link_to 'New Flow', new_flow_path %>
+  <div class="cards-container">
+    <%= render "index", cat_id: 1 %>
+  </div>
+
+
+<%#= link_to 'New Flow', new_flow_path %>
+</div>

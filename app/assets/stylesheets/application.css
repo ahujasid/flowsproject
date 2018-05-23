@@ -14,3 +14,37 @@
  *= require_self
  */
 
+html {
+ font-family: 'Poppins', sans-serif;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 32px;
+	width: 80vw;
+	margin: 0 auto;
+}
+
+.header{
+
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 56px;
+	align-items: center;
+	grid-column: span 7;
+}
+
+.push{
+	margin-left: auto;
+	margin-right: 48px;
+}
+
+.menu{
+	grid-column: span 1;
+}
+
+.cards-container{
+	grid-column: span 6;
+}

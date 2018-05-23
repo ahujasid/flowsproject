@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <% img_array = @flow.images.split %>
+
 <% img_array.each do |image| %>
-<%= image_tag image %>
+	<div class="flow-image">
+		<%= image_tag image %>
+	</div>
 <% end %>
 
-<br><br>
 <%= link_to 'Edit', edit_flow_path(@flow.id) %> |
 <%= link_to 'Back', root_path %>
