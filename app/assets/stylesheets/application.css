@@ -14,18 +14,20 @@
  *= require_self
  */
 
+
+
 html {
  font-family: 'Poppins', sans-serif;
 }
 
-.container{
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	grid-gap: 32px;
-	width: 80vw;
+
+/* -----MAIN GRID------ */
+.main-container{
+	width: 80%;
 	margin: 0 auto;
 }
 
+/* ------NAV BAR-----*/
 .header{
 
 	display: flex;
@@ -34,17 +36,43 @@ html {
 	height: 56px;
 	align-items: center;
 	grid-column: span 7;
+	margin-bottom: 48px;
 }
 
+
+/* ------TO ALIGN RIGHT ON THE NAV BAR-----*/
 .push{
 	margin-left: auto;
 	margin-right: 48px;
 }
 
-.menu{
-	grid-column: span 1;
+
+/*---------MENU+CARDS ---------*/
+.content-container{
+	display: grid;
+	/*grid-template-columns: repeat(4, 1fr);*/
+	grid-template-columns: 10fr 53fr;
+	grid-gap: 2.3vw;
+
 }
 
-.cards-container{
-	grid-column: span 6;
+/* ------CATEGORY LIST-----*/
+.menu{
+	/*grid-row: 1 / -1;*/
+	min-width: 141px;
 }
+
+.cards-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+	grid-gap: 3%;
+}
+
+.card-img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+
