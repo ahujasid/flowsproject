@@ -15,10 +15,12 @@
  */
 
 
-
 html {
  font-family: 'Poppins', sans-serif;
 }
+
+
+@media screen and (min-width: 802px) {
 
 
 /* -----MAIN GRID------ */
@@ -33,9 +35,8 @@ html {
 	display: flex;
 	top: 0;
 	left: 0;
-	height: 56px;
+	height: 64px;
 	align-items: center;
-	grid-column: span 7;
 	margin-bottom: 48px;
 }
 
@@ -51,23 +52,29 @@ html {
 .content-container{
 	display: grid;
 	/*grid-template-columns: repeat(4, 1fr);*/
-	grid-template-columns: 10fr 53fr;
-	grid-gap: 2.3vw;
+	grid-template-columns: 10fr 60fr;
+	/*grid-gap: 3.3%;*/
+	grid-gap: 32px;
 
 }
 
 /* ------CATEGORY LIST-----*/
 .menu{
-	/*grid-row: 1 / -1;*/
-	min-width: 141px;
+	grid-row: 1 / -1;
+	min-width: 120px;
 }
 
+
+/* ------CARDS GRID-----*/
 .cards-wrapper{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
-	grid-gap: 3%;
+	/*grid-gap: 3.3%;*/
+	grid-gap: 32px;
 }
 
+
+/* ------FILL IMAGE TO GRID-----*/
 .card-img{
 	width: 100%;
 	height: auto;
@@ -75,4 +82,159 @@ html {
 
 
 
+/* ------CARD STYLING-----*/
+
+.card{
+	/*margin-bottom: 10.78%;*/
+	margin-bottom: 32px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.16);
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+
+.card:hover{
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.16), 0px 8px 16px rgba(0,0,0,0.05);
+	transform: translate(0px, -8px);
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+
+/*.card:hover .card-company-name{
+	padding-left: 8px;
+}
+
+.card:hover .card-flow-name{
+	padding-left: 8px;
+}*/
+
+.card-company-name{
+	/*margin-top: 5.39%;*/
+	padding-left: 16px;
+	margin-top: 16px;
+	line-height: 1.416;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #AFB2B6;
+	text-transform: uppercase;
+}
+
+.card-flow-name{
+  /*margin-top: 2.7%;
+  margin-bottom: 5.39%;*/
+  padding-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  line-height: 1.4375;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2F363F;
+}
+
+.flow-img{
+	width: 100%;
+	height: auto;
+}
+
+
+}
+
+
+
+
+/*------------------------MOBILE----------------------------------------------------------*/
+
+
+@media screen and (max-width: 801px) {
+
+/* -----MAIN GRID------ */
+.main-container{
+	margin-left: 16px;
+	margin-right: 16px;
+	width: auto;
+}
+
+/* ------NAV BAR-----*/
+.header{
+
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 64px;
+	align-items: center;
+	margin-bottom: 48px;
+}
+
+
+/* ------TO ALIGN RIGHT ON THE NAV BAR-----*/
+.push{
+	margin-left: auto;
+	margin-right: 24px;
+}
+
+
+/*---------MENU+CARDS ---------*/
+.content-container{
+display: block;
+}
+
+/* ------CATEGORY LIST-----*/
+.menu{
+	display: flex;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin-bottom: 32px;
+}
+
+
+/* ------CARDS GRID-----*/
+.cards-wrapper{
+	display: grid;
+	grid-template-columns: 1fr;
+	/*grid-gap: 3.3%;*/
+}
+
+
+/* ------FILL IMAGE TO GRID-----*/
+.card-img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+/* ------CARD STYLING-----*/
+
+.card{
+	margin-bottom: 32px;
+}
+
+.card-company-name{
+	/*margin-top: 5.39%;*/
+	margin-top: 16px;
+	line-height: 1.416;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #AFB2B6;
+	text-transform: uppercase;
+}
+
+.card-flow-name{
+  /*margin-top: 2.7%;
+  margin-bottom: 5.39%;*/
+  margin-top: 8px;
+  margin-bottom: 16px;
+  line-height: 1.4375;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2F363F;
+}
+
+.flow-img{
+	width: 100%;
+	height: auto;
+}
 
