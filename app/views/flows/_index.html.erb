@@ -1,17 +1,21 @@
 
 <% @flows.each do |flow| %>
 	<%#if flow.category_id != cat_id %>
-
-	<div class="card">
-		<div><%= image_tag flow.thumbnail_img, :class => "card-img" %></div>
-	  	<div class="card-company-name"><%= flow.company.name %></div>
-	  <div class="card-flow-name"><%= flow.display_name %></div>
-	  <!--<div class="card-company-logo"><%#= image_tag flow.company.logo %></div>-->
 	
-		        
-		<%= link_to 'Show', show_flow_path(flow) %>
+
+		<%= link_to show_flow_path(flow) do %>
+		<div class="card">
+			<div><%= image_tag flow.thumbnail_img, :class => "card-img" %></div>
+		  	<div class="card-company-name"><%= flow.company.name %></div>
+		  <div class="card-flow-name"><%= flow.display_name %></div>
+	  <!--<div class="card-company-logo"><%#= image_tag flow.company.logo %></div>-->
+	</div>      
+
+	<% end %> 
+
+<% end %>
+
+
+<%#= link_to 'Show', show_flow_path(flow) %>
 		<%#= link_to 'Edit', edit_flow_path(flow) %>
 		<%#= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
-	<%# end %>
-<% end %>

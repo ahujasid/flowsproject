@@ -19,6 +19,10 @@ html {
  font-family: 'Poppins', sans-serif;
 }
 
+a{
+	text-decoration: none;
+}
+
 
 @media screen and (min-width: 802px) {
 
@@ -54,7 +58,7 @@ html {
 	/*grid-template-columns: repeat(4, 1fr);*/
 	grid-template-columns: 10fr 60fr;
 	/*grid-gap: 3.3%;*/
-	grid-gap: 32px;
+	grid-gap: 16px;
 
 }
 
@@ -68,9 +72,9 @@ html {
 /* ------CARDS GRID-----*/
 .cards-wrapper{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 	/*grid-gap: 3.3%;*/
-	grid-gap: 32px;
+	grid-gap: 40px;
 }
 
 
@@ -86,12 +90,15 @@ html {
 
 .card{
 	/*margin-bottom: 10.78%;*/
-	margin-bottom: 32px;
+	/*margin-bottom: 32px;*/
+	padding-bottom: 16px;
 	box-shadow: 0px 0px 1px rgba(0,0,0,0.16);
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 }
+
+
 
 .card:hover{
 	box-shadow: 0px 0px 1px rgba(0,0,0,0.16), 0px 8px 16px rgba(0,0,0,0.05);
@@ -125,12 +132,14 @@ html {
   margin-bottom: 5.39%;*/
   padding-left: 16px;
   margin-top: 8px;
-  margin-bottom: 16px;
+  /*margin-bottom: 16px;*/
   line-height: 1.4375;
   font-size: 18px;
   font-weight: 600;
   color: #2F363F;
+
 }
+
 
 .flow-img{
 	width: 100%;
