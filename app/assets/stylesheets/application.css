@@ -41,7 +41,7 @@ a{
 	left: 0;
 	height: 64px;
 	align-items: center;
-	margin-bottom: 48px;
+	margin-bottom: 56px;
 }
 
 
@@ -52,24 +52,58 @@ a{
 }
 
 
-/*---------MENU+CARDS ---------*/
+/*-------------------  CONTENT STARTS HERE -----------------------*/
 .content-container{
 	display: grid;
-	/*grid-template-columns: repeat(4, 1fr);*/
 	grid-template-columns: 10fr 60fr;
+	grid-template-rows: repeat(155px, 1fr);
 	/*grid-gap: 3.3%;*/
 	grid-gap: 16px;
 
 }
 
+
+.empty{
+	grid-row: 1 / 2;
+	column-span: 10;
+	margin-bottom: 64px;
+}
+
+.intro-message{
+	grid-row: 1 / 2;
+	column-span: all;
+	align-items: center;
+	margin-bottom: 64px;
+}
+
+
+.intro-head{
+	font-size: 24px;
+	font-weight: 600;
+	color: #1C222A;
+	line-height: 1.38;
+	display: block;
+
+}
+
+.intro-subhead{
+	margin-top: 8px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #535B62;
+	line-height: 1.39;
+	display: block;
+}
+
+
 /* ------MENU-----*/
 .menu{
-	grid-row: 1 / -1;
+	/*grid-row: 2 / -1;*/
 	min-width: 120px;
 }
 
 .menu a{
-	line-height: 40px;
+	line-height: 48px;
 	color: #535B62;
 }
 
@@ -91,6 +125,7 @@ a{
 .card-img{
 	width: 100%;
 	height: auto;
+	border-radius: 8px 8px 0px 0px;
 }
 
 
@@ -116,13 +151,6 @@ a{
 	transition-timing-function: ease-out;
 }
 
-/*.card:hover .card-company-name{
-	padding-left: 8px;
-}
-
-.card:hover .card-flow-name{
-	padding-left: 8px;
-}*/
 
 .card-company-name{
 	/*margin-top: 5.39%;*/
@@ -155,14 +183,18 @@ a{
 	height: auto;
 }
 
-
-
 }
 
 
 
 
-/*------------------------MOBILE----------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------MOBILE----------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
 
 
 @media screen and (max-width: 801px) {
@@ -198,7 +230,33 @@ a{
 display: block;
 }
 
-/* ------CATEGORY LIST-----*/
+
+.intro-message{
+	width: 100%;
+	align-items: center;
+	margin-bottom: 64px;
+}
+
+
+.intro-head{
+	font-size: 24px;
+	font-weight: 600;
+	color: #1C222A;
+	line-height: 1.38;
+	display: block;
+
+}
+
+.intro-subhead{
+	margin-top: 8px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #535B62;
+	line-height: 1.39;
+	display: block;
+}
+
+/* ------MENU-----*/
 .menu{
 	display: flex;
 	top: 0;
@@ -221,6 +279,7 @@ display: block;
 .card-img{
 	width: 100%;
 	height: auto;
+	border-radius: 8px 8px 0px 0px;
 }
 
 
@@ -237,14 +296,6 @@ display: block;
 	transition-timing-function: ease-out;
 }
 
-
-/*.card:hover .card-company-name{
-	padding-left: 8px;
-}
-
-.card:hover .card-flow-name{
-	padding-left: 8px;
-}*/
 
 .card-company-name{
 	/*margin-top: 5.39%;*/
@@ -275,5 +326,6 @@ display: block;
 .flow-img{
 	width: 100%;
 	height: auto;
+
 }
 
