@@ -1,10 +1,17 @@
 <div class="close-flow"></div>
 
 <% img_array = @flow.images.split %>
+<% overlay_array = @flow.image_overlay.split('#') %>
 
 <div class="main-container">
-<% img_array.each do |image| %>
-		<div><%= image_tag image, :class => "flow-img" %></div>
+<% img_array.zip(overlay_array).each do |image, overlay| %>
+		
+		<div class="flow-image-with-text">
+			<%= image_tag image, :class => "flow-img" %>
+			<div class="image-overlay"><%= overlay %> 
+			</div>
+		</div>
+
 <% end %>
 </div>
 <%#= link_to 'Edit', edit_flow_path(@flow.id) %> |

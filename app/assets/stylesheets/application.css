@@ -109,6 +109,7 @@ a{
 
 .menu a:hover{
 	color: #1F7AE0;
+	position: fixed;
 }
 
 
@@ -147,7 +148,7 @@ a{
 .card:hover{
 	box-shadow: 0px 0px 1px rgba(0,0,0,0.16), 0px 8px 16px rgba(0,0,0,0.05);
 	transform: translate(0px, -8px);
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 }
 
@@ -177,11 +178,60 @@ a{
 
 }
 
+.flow-image-with-text{
+	position: relative;
+	width: 100%;
+	display: inline-block;
+}
+
 
 .flow-img{
 	width: 100%;
 	height: auto;
+	display: block;
+	margin-bottom: 32px;
 }
+
+
+.image-overlay{
+	background-color: rgba(0,0,0,0.0);
+	transition-duration: 1s;
+	position: absolute;
+	display: block;
+	bottom: 5%;
+	padding: 18px;
+	color: rgba(255,255,255,0);
+	border-radius: 16px;
+	margin-bottom: 16px;
+	margin-left: 16px;
+	margin-right: 16px;
+	line-height: 1.4;
+	font-size: 14px;
+
+}
+
+.flow-image-with-text:hover > .image-overlay{
+
+	-webkit-transition: background-color 1s ease-out, color 1s ease-out;
+  -moz-transition: background-color 1s ease-out, color 1s ease-out;
+  -o-transition: background-color 1s ease-out, color 1s ease-out;
+	transition: background-color 1s ease-out, color 1s ease-out;
+  position: absolute;
+	display: block;
+	bottom: 5%;
+	padding: 18px;
+		background-color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,1);
+	border-radius: 16px;
+	margin-bottom: 16px;
+	margin-left: 16px;
+	margin-right: 16px;
+	line-height: 1.4;
+	font-size: 14px;
+}
+
+
+
 
 }
 
@@ -288,7 +338,7 @@ display: block;
 
 .card{
 	/*margin-bottom: 10.78%;*/
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 	padding-bottom: 16px;
 	box-shadow: 0px 0px 1px rgba(0,0,0,0.16);
 	border-radius: 8px;
