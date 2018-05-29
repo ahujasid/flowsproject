@@ -1,4 +1,4 @@
-<div class="close-flow"></div>
+
 
 
 <% img_array = @flow.images.split %>
@@ -7,6 +7,19 @@
 
 
 <div class="main-container">
+
+	<div class="close-flow">
+
+		<span class="intro-head"><%=@flow.name %></span>
+
+		<div class="close-push-right"><%= link_to root_path do %>
+		<%= inline_svg 'close.svg', class: 'close-icon' %>
+		<% end %>
+	</div>
+
+	</div>
+
+
 	<div class="flow-grid">
 
 		<div class = "flow-navigation">

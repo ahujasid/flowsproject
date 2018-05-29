@@ -31,7 +31,7 @@ a:hover{
 
 a:active{
 	font-weight: 600;
-	color: #123DEE;
+	color: #124DEE;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -222,9 +222,29 @@ a:active{
 
 
 .close-flow{
+	display: flex;
+	top: 0;
+	left: 0;
 	height: 80px;
+	align-items: center;
 	margin-bottom: 48px;
+	width: 100%;
+	/*position: sticky;
+	overflow: hidden;
+	background: white;
+	z-index: 3;
+	top: 0;*/
 }
+
+
+.close-push-right{
+	margin-left: auto;
+}
+.close-icon{
+	height: 40px;
+	width: 40px;
+}
+
 
 
 .flow-grid{
@@ -238,7 +258,7 @@ a:active{
 	min-width: 120px;
 	grid-row: 1/-1;
 	position: sticky;
-  top: 32px;
+  top: 48px;
   height: 100vh; 
 }
 
@@ -444,9 +464,53 @@ display: block;
 }
 
 
+/*------------------------------------FLOW--------------------------------*/
+
+.close-flow{
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 80px;
+	align-items: center;
+	margin-bottom: 24px;
+	width: 100%;
+}
+
+.close-push-right{
+	margin-left: auto;
+}
+.close-icon{
+	height: 32px;
+	width: 32px;
+}
+
+
+.flow-grid{
+	display: block;
+}
+
+.flow-navigation{
+	display: none; 
+}
+
+.flow-images-container{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.flow-image-with-text{
+	margin-bottom: 24px;
+}
+
 .flow-img{
 	width: 100%;
 	height: auto;
+}
+
+.image-overlay{
+	display: none;
+}
 
 }
+
 

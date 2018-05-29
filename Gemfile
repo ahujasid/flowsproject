@@ -57,3 +57,4 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'jquery-rails'
 gem 'rails-js'
+gem 'inline_svg'
