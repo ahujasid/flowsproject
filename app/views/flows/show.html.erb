@@ -3,20 +3,34 @@
 
 <% img_array = @flow.images.split %>
 <% overlay_array = @flow.image_overlay.split('#') %>
+<% navigation_array = @flow.nav_elements.split('#') %>
 
 
 <div class="main-container">
+	<div class="flow-grid">
 
-<% img_array.zip(overlay_array).each do |image, overlay| %>
-		
-		<div class="flow-image-with-text">
-			<%= image_tag image, :class => "flow-img" %>
-			<div class="image-overlay"><%= overlay %> 
-			</div>
+		<div class = "flow-navigation">
+
+		 <% navigation_array.each do |nav_element| %>
+			 <% @go_to_id += 1 %>
+			 <div class="flow-links"> <%= link_to nav_element, :anchor => "#{@go_to_id}" %></div>
+		 <% end %>
+
+		</div>
+			
+		<div class="flow-images-container">
+
+			<% img_array.zip(overlay_array).each do |image, overlay| %>
+				<% @js_id += 1 %>
+				<div id="<%= @js_id %>" class="flow-image-with-text">
+					<%= image_tag image, :class => "flow-img" %>
+					<div class="image-overlay"><%= overlay %></div>
+				</div>
+			<% end %>
+
 		</div>
 
-<% end %>
-
+	</div>
 </div>
 <%#= link_to 'Edit', edit_flow_path(@flow.id) %> |
 <%#= link_to 'Back', root_path %>

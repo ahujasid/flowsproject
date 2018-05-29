@@ -57,4 +57,3 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'jquery-rails'
 gem 'rails-js'
-gem 'link_to_active_state'

@@ -22,6 +22,7 @@ html {
 a{
 	text-decoration: none;
 	color: #525661;
+	font-size: 15px;
 }
 
 a:hover{
@@ -68,7 +69,7 @@ a:active{
 	color: #AEB0B5;
 }
 
-@media screen and (min-width: 802px) {
+@media screen and (min-width: 769px) {
 
 
 /* -----MAIN GRID------ */
@@ -142,7 +143,6 @@ a:active{
 .menu{
 	/*grid-row: 2 / -1;*/
 	min-width: 120px;
-	font-size: 15px;
 }
 
 .menu a{
@@ -213,10 +213,39 @@ a:active{
 
 }
 
+
+/*-----------------------------------FLOW PAGE---------------------------------*/
+
+
+
+.close-flow{
+	height: 80px;
+	margin-bottom: 48px;
+}
+
+
+.flow-grid{
+	display: grid;
+	grid-template-columns: 10fr 60fr;
+	grid-template-rows: repeat(800px, 1fr);
+	grid-gap: 0px;
+}
+
+.flow-navigation{
+	min-width: 120px;
+	grid-row: 1/-1;
+}
+
+.flow-navigation a{
+	line-height: 48px;
+}
+
+
 .flow-image-with-text{
 	position: relative;
 	width: 100%;
-	display: inline-block;
+	display: inline-block; 
+	
 }
 
 
@@ -245,6 +274,7 @@ a:active{
 	font-size: 14px;
 
 }
+
 
 .flow-image-with-text:hover > .image-overlay{
 
@@ -287,7 +317,7 @@ a:active{
 /*------------------------------------------------------------------------------------------------------*/
 
 
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 768px) {
 
 /* -----MAIN GRID------ */
 .main-container{

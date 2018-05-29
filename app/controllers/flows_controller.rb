@@ -29,6 +29,8 @@ class FlowsController < ApplicationController
   # GET /flows/1.json
   def show
     @flow = Flow.friendly.find(params[:id]) 
+    @js_id = 0
+    @go_to_id = 0
   end
 
   # GET /flows/new
