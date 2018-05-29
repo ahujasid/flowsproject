@@ -1,18 +1,17 @@
 
 <% @flows.each do |flow| %>
 	<%#if flow.category_id != cat_id %>
-	
-
 		<%= link_to show_flow_path(flow) do %>
+
 		<div class="card">
 			<div><%= image_tag flow.thumbnail_img, :class => "card-img" %></div>
-		  	<div class="card-company-name"><%= flow.company.name %></div>
-		  <div class="card-flow-name"><%= flow.display_name %></div>
+		  	<div class="card-company-name grey-extra-light"><%= flow.company.name %></div>
+		  <div class="card-flow-name grey-dark"><%= flow.display_name %></div>
 	  <!--<div class="card-company-logo"><%#= image_tag flow.company.logo %></div>-->
-	</div>      
+	</div> 
 
-	<% end %> 
-
+		<%end %>     
+	<%# end %> 
 <% end %>
 
 

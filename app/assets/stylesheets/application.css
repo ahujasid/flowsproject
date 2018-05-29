@@ -21,8 +21,52 @@ html {
 
 a{
 	text-decoration: none;
+	color: #525661;
 }
 
+a:hover{
+	color: #124DEE;
+}
+
+a:active{
+	font-weight: 600;
+	color: #123DEE;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: yellow;
+}
+
+::selection {
+    color: black; 
+    background: #FFE73E;
+}
+
+.yellow{
+	color: #FFE73E;
+}
+
+.blue{
+	color: #124DEE;
+}
+
+.grey-dark{
+	color: #303440;
+}
+
+
+.grey-regular{
+	color: #525661;
+}
+
+.grey-light{
+	color: #81848C;
+}
+
+.grey-extra-light{
+	color: #AEB0B5;
+}
 
 @media screen and (min-width: 802px) {
 
@@ -39,9 +83,9 @@ a{
 	display: flex;
 	top: 0;
 	left: 0;
-	height: 64px;
+	height: 80px;
 	align-items: center;
-	margin-bottom: 56px;
+	margin-bottom: 48px;
 }
 
 
@@ -80,7 +124,6 @@ a{
 .intro-head{
 	font-size: 24px;
 	font-weight: 600;
-	color: #1C222A;
 	line-height: 1.38;
 	display: block;
 
@@ -90,7 +133,6 @@ a{
 	margin-top: 8px;
 	font-size: 18px;
 	font-weight: 400;
-	color: #535B62;
 	line-height: 1.39;
 	display: block;
 }
@@ -100,15 +142,11 @@ a{
 .menu{
 	/*grid-row: 2 / -1;*/
 	min-width: 120px;
+	font-size: 15px;
 }
 
 .menu a{
 	line-height: 48px;
-	color: #535B62;
-}
-
-.menu a:hover{
-	color: #1F7AE0;
 }
 
 
@@ -160,7 +198,6 @@ a{
 	font-size: 13px;
 	font-weight: 600;
 	letter-spacing: 1px;
-	color: #AFB2B6;
 	text-transform: uppercase;
 }
 
@@ -173,7 +210,6 @@ a{
   line-height: 1.4375;
   font-size: 18px;
   font-weight: 600;
-  color: #2F363F;
 
 }
 
@@ -194,9 +230,10 @@ a{
 
 .image-overlay{
 	background-color: rgba(0,0,0,0.0);
-	transition-duration: 0.6s;
+	transition: background-color 0.4s ease-out, color 0.4s ease-out;
 	position: absolute;
 	display: block;
+	max-width: 30%;
 	bottom: 5%;
 	padding: 18px;
 	color: rgba(255,255,255,0);
@@ -211,11 +248,15 @@ a{
 
 .flow-image-with-text:hover > .image-overlay{
 
+  /*---------TRANSITIONS-------*/
 	-webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out;
   -moz-transition: background-color 0.6s ease-out, color 0.6s ease-out;
   -o-transition: background-color 0.6s ease-out, color 0.6s ease-out;
 	transition: background-color 0.6s ease-out, color 0.6s ease-out;
+	/*-----------------*/
+
   position: absolute;
+  max-width: 30%;
 	display: block;
 	bottom: 5%;
 	padding: 18px;
@@ -290,7 +331,6 @@ display: block;
 .intro-head{
 	font-size: 24px;
 	font-weight: 600;
-	color: #1C222A;
 	line-height: 1.38;
 	display: block;
 
@@ -300,7 +340,6 @@ display: block;
 	margin-top: 8px;
 	font-size: 18px;
 	font-weight: 400;
-	color: #535B62;
 	line-height: 1.39;
 	display: block;
 }
@@ -312,7 +351,6 @@ display: block;
 	left: 0;
 	width: 100%;
 	margin-bottom: 32px;
-	color: #535B62;
 }
 
 
@@ -354,7 +392,6 @@ display: block;
 	font-size: 13px;
 	font-weight: 600;
 	letter-spacing: 1px;
-	color: #AFB2B6;
 	text-transform: uppercase;
 }
 
@@ -367,7 +404,6 @@ display: block;
   line-height: 1.4375;
   font-size: 18px;
   font-weight: 600;
-  color: #2F363F;
 
 }
 

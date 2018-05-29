@@ -1,9 +1,12 @@
 <div class="close-flow"></div>
 
+
 <% img_array = @flow.images.split %>
 <% overlay_array = @flow.image_overlay.split('#') %>
 
+
 <div class="main-container">
+
 <% img_array.zip(overlay_array).each do |image, overlay| %>
 		
 		<div class="flow-image-with-text">
@@ -13,6 +16,7 @@
 		</div>
 
 <% end %>
+
 </div>
 <%#= link_to 'Edit', edit_flow_path(@flow.id) %> |
 <%#= link_to 'Back', root_path %>

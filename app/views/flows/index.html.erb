@@ -9,19 +9,20 @@
 	<div class="content-container">
 		<div class="empty"> </div>
 
-		<div class="intro-message"><span class="intro-head">Real life flows by industry leaders in design.</span>
-			<span class="intro-subhead">Curated for your inspiration.</span>
+		<div class="intro-message"><span class="intro-head grey-dark">Real life flows by industry leaders in design.</span>
+			<span class="intro-subhead grey-light">Curated for your inspiration.</span>
 		</div>
 
 		<div class="menu">
-	    <% @categories.each do |category| %>
-	      <div class="category"><%= link_to category.name, root_path %></div>
+			<div class="category"><%= link_to 'All', all_items_path, :remote => true %></div>
+	    <% @categories.each do |cat| %>
+	      <div class="category-links"><%= link_to cat.name, fetch_items_path(:category_id => cat.id), :remote => true %></div>
 	    <% end %>
 	  </div>
 
 		<div class="cards-container">
 				<div class="cards-wrapper">
-	    <%= render "index", cat_id: 1 %>
+	    	<%= render 'index', locals: {flows: @flows} %>
 	  		</div>
 
 	  </div>

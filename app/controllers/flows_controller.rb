@@ -1,5 +1,4 @@
 class FlowsController < ApplicationController
-  before_action :set_flow, only: [:show, :edit, :update, :destroy]
 
   # GET /flows
   # GET /flows.json
@@ -9,13 +8,31 @@ class FlowsController < ApplicationController
     @flows = Flow.all
   end
 
+   def from_category
+    @categories = Category.all
+    @flows = Category.find(params[:category_id]).flows
+    respond_to do |format|
+        format.js
+    end
+  end 
+
+  def show_all
+    @categories = Category.all
+    @flows = Flow.all
+    respond_to do |format|
+      format.js
+    end
+  end
+
+
   # GET /flows/1
   # GET /flows/1.json
   def show
-
+    @flow = Flow.friendly.find(params[:id]) 
   end
 
   # GET /flows/new
+=begin
   def new
     @company = Company.new
     @category = Category.new
@@ -24,6 +41,7 @@ class FlowsController < ApplicationController
 
   # GET /flows/1/edit
   def edit
+    @flow = Flow.friendly.find(params[:id]) 
   end
 
   # POST /flows
@@ -45,6 +63,7 @@ class FlowsController < ApplicationController
   # PATCH/PUT /flows/1
   # PATCH/PUT /flows/1.json
   def update
+    @flow = Flow.friendly.find(params[:id]) 
     respond_to do |format|
       if @flow.update(flow_params)
         format.html { redirect_to @flow, notice: 'Flow was successfully updated.' }
@@ -59,18 +78,19 @@ class FlowsController < ApplicationController
   # DELETE /flows/1
   # DELETE /flows/1.json
   def destroy
+    @flow = Flow.friendly.find(params[:id]) 
     @flow.destroy
     respond_to do |format|
       format.html { redirect_to flows_url, notice: 'Flow was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
+=end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_flow
-      @flow = Flow.friendly.find(params[:id])    
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flow_params
