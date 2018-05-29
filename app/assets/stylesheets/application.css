@@ -143,6 +143,9 @@ a:active{
 .menu{
 	/*grid-row: 2 / -1;*/
 	min-width: 120px;
+	position: sticky;
+  top: 32px;
+  height: 100vh; 
 }
 
 .menu a{
