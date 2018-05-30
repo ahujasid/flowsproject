@@ -8,13 +8,16 @@ class FlowsController < ApplicationController
 
     if(params[:category_id].blank?)
       @flows = Flow.all.order("created_at DESC")
+      @categ_id = params[:category_id]
+
     else
       @flows = Category.find(params[:category_id]).flows.order("created_at DESC")
       @categ_id = params[:category_id]
+      @categ_name = Category.find_by(id: params[:category_id]).name
     end
 
     respond_to do |format|
-      format.js
+      format.js 
       format.html
     end
   end

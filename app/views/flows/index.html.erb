@@ -22,10 +22,11 @@
 			<span class="intro-subhead grey-light">Curated for your inspiration.</span>
 		</div>
 
-		<div class="menu">
-			<div class="category"><%= link_to 'All', root_path, :remote => true %></div>
+		<div class="menu" id="active-menu">
+			<div class="category"><%= active_link_to 'All', root_path, active: :exact, :remote => true %></div>
+
 	    <% @categories.each do |cat| %>
-	      <div class="category-links"><%= link_to cat.name, root_path(:category_id => cat.id), :remote => true %>	
+	      <div class="category-links"><%= active_link_to cat.name, root_path(:category_id => cat.id), :remote => true, active: :exact %>	
 	      </div>
 	    <% end %>
 	  </div>
