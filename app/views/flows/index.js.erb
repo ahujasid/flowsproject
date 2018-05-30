@@ -1,0 +1,5 @@
+var scrollPosition = $(window).scrollTop();
+$(".cards-wrapper").html('<%= escape_javascript(render 'index', locals: { flows: @flows } ) %>'); 
+$(window).scrollTop(scrollPosition);
+//window.history.pushState("null", "null", "/category/<%= @categ_id %>");
+//window.location.hash = "<%= @categ_id %>"

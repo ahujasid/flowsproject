@@ -3,27 +3,21 @@ class FlowsController < ApplicationController
   # GET /flows
   # GET /flows.json
   def index
-    @companies = Company.all
     @categories = Category.all
-    @flows = Flow.all
-  end
+    @company = Company.all
 
-   def from_category
-    @categories = Category.all
-    @flows = Category.find(params[:category_id]).flows
-    respond_to do |format|
-        format.js
+    if(params[:category_id].blank?)
+      @flows = Flow.all.order("created_at DESC")
+    else
+      @flows = Category.find(params[:category_id]).flows.order("created_at DESC")
+      @categ_id = params[:category_id]
     end
-  end 
 
-  def show_all
-    @categories = Category.all
-    @flows = Flow.all
     respond_to do |format|
       format.js
+      format.html
     end
   end
-
 
   # GET /flows/1
   # GET /flows/1.json

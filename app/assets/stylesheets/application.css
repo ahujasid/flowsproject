@@ -29,7 +29,7 @@ a:hover{
 	color: #124DEE;
 }
 
-a:active{
+.active{
 	font-weight: 600;
 	color: #124DEE;
 }
@@ -40,7 +40,7 @@ a:active{
 }
 
 ::selection {
-    color: black; 
+    color: #303440; 
     background: #FFE73E;
 }
 
