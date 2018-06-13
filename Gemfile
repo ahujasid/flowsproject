@@ -59,4 +59,5 @@ gem 'jquery-rails'
 gem 'rails-js'
 gem 'inline_svg'
 gem 'active_link_to'
+gem 'kaminari'
 

@@ -7,11 +7,11 @@ class FlowsController < ApplicationController
     @company = Company.all
 
     if(params[:category_id].blank?)
-      @flows = Flow.all.order("created_at DESC")
+      @flows = Flow.all.order("created_at DESC").page(params[:page]).per(30)
       @categ_id = params[:category_id]
 
     else
-      @flows = Category.find(params[:category_id]).flows.order("created_at DESC")
+      @flows = Category.find(params[:category_id]).flows.order("created_at DESC").page(params[:page]).per(30)
       @categ_id = params[:category_id]
       @categ_name = Category.find_by(id: params[:category_id]).name
     end
