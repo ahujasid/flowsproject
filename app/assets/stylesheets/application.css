@@ -161,6 +161,11 @@ a:hover{
 	grid-gap: 40px;
 }
 
+.img-bg{
+	width: 100%;
+	border-radius: 8px 8px 0px 0px;
+}
+
 
 /* ------FILL IMAGE TO GRID-----*/
 .card-img{
@@ -237,9 +242,21 @@ a:hover{
 }
 
 
-.close-push-right{
-	margin-left: auto;
+
+.empty-flex{
+	flex: 10;
 }
+
+.flex-two{
+	flex: 58;
+}
+
+
+
+.close-push-right{
+	flex: 2;
+}
+
 .close-icon{
 	height: 40px;
 	width: 40px;

@@ -9,8 +9,9 @@
 <div class="main-container">
 
 	<div class="close-flow">
+		<div class="empty-flex"></div>
 
-		<span class="intro-head"><%=@flow.name %></span>
+		<span class="intro-head flex-two"><%=@flow.name %></span>
 
 		<div class="close-push-right"><%= link_to root_path do %>
 		<%= inline_svg 'close.svg', class: 'close-icon' %>
