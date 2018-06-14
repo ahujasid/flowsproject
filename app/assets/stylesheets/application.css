@@ -25,6 +25,62 @@ a{
 	font-size: 15px;
 }
 
+.full-border{
+	grid-column: 1/-1;
+	border-top: 1px solid rgba(221,222,228,0.6);
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+.pagination{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 48px;
+	margin-top: 16px;
+	grid-column: 1/-1;
+}
+
+.pagination a{
+	margin-left: 12px;
+	font-size: 18px;
+	padding: 10px 16px;
+	border-radius: 4px;
+}
+
+.pagination a:hover{
+	background-color: rgba(221,222,228,0.4);
+}
+
+.pagination span{
+	margin-left: 12px;
+	font-size: 18px;
+	
+}
+
+.pagination .page.current{
+	font-weight: 600;
+	background-color: #124DEE;
+	padding: 10px 16px;
+	border-radius: 4px;
+	color: white;
+}
+
+.pagination .first{
+	display: none;
+}
+
+.pagination .last{
+	display: none;
+}
+
+.pagination .next{
+	display: none;
+}
+
+.pagination .prev{
+	display: none;
+}
+
 a:hover{
 	color: #124DEE;
 }
