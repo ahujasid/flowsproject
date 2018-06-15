@@ -1,10 +1,16 @@
-var scrollPosition = $(window).scrollTop();
+// var scrollPosition = $(window).scrollTop();
 
 $(".cards-wrapper").html('<%= escape_javascript(render 'index', locals: { flows: @flows } ) %>'); 
 
-$(window).scrollTop(scrollPosition);
+// $(window).scrollTop(scrollPosition);
+$('html, body').animate({scrollTop: 248});
 
 history.replaceState({}, "<%= @categ_name %>", "<%= request.original_url %>");
 $("#active-menu").load(document.URL  + " #active-menu");
+
+
+
+
+
 //history.replaceState({}, "title", "railsappi");
 //window.location.hash = "<%= @categ_id %>"

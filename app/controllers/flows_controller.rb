@@ -7,7 +7,7 @@ class FlowsController < ApplicationController
     @company = Company.all
 
     if(params[:category_id].blank?)
-      @flows = Flow.all.order("created_at DESC").page(params[:page]).per(18)
+      @flows = Flow.order("created_at DESC").page(params[:page]).per(18)
       @categ_id = params[:category_id]
 
     else

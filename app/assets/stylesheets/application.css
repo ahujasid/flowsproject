@@ -233,6 +233,16 @@ a:hover{
 	line-height: 48px;
 }
 
+.category-header{
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1.416;
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgba(221,222,228,0.6);
+	width: 80%;
+}
+
 
 /* ------CARDS GRID-----*/
 .cards-wrapper{
@@ -408,11 +418,9 @@ a:hover{
 	max-width: 30%;
 	bottom: 16px;
 	padding: 18px;
+	left: 16px;
 	color: rgba(255,255,255,0);
 	border-radius: 16px;
-	margin-bottom: 16px;
-	margin-left: 16px;
-	margin-right: 16px;
 	line-height: 1.4;
 	font-size: 14px;
 
@@ -537,6 +545,10 @@ display: block;
 	margin-bottom: 24px;
 }
 
+
+.category-header{
+	display: none;
+}
 
 
 /* ------CARDS GRID-----*/

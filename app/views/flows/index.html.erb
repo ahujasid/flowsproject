@@ -27,6 +27,7 @@
 		</div>
 
 		<div class="menu" id="active-menu">
+			<div class = "category-header grey-extra-light">CATEGORIES</div>
 			<div class="category"><%= active_link_to 'All', root_path, active: :exact, :remote => true %></div>
 
 	    <% @categories.each do |cat| %>
