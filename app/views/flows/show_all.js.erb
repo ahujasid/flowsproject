@@ -1,3 +1,7 @@
 var scrollPosition = $(window).scrollTop();
+
 $(".cards-wrapper").html("<%= escape_javascript(render 'index', locals: { flows: @flows } ) %>"); 
+
+
 $(window).scrollTop(scrollPosition);
+

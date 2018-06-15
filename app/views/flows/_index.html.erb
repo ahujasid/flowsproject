@@ -4,7 +4,10 @@
 		<%= link_to show_flow_path(flow) do %>
 
 		<div class="card">
-			<div class="img-bg" style="background-color: <%=flow.company.bgcolor%>"><%= image_tag flow.thumbnail_img, :class => "card-img"%></div>
+			<div class="img-bg" style="background-color: <%=flow.company.bgcolor%>">
+				<%= image_tag flow.thumbnail_img, :class => "card-img"%>
+					
+				</div>
 
 		  	<div class="card-company-name grey-extra-light"><%= flow.display_name %></div>
 

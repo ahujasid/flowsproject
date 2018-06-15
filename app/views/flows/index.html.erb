@@ -1,10 +1,14 @@
 
-
-
 <div class = "main-container">
 
 	<div class="header">
-		<div class="flows-logo"><%= image_tag "http://via.placeholder.com/50x24" %></div>
+		<div class="flows-logo">
+			<%=link_to root_path do%>
+			<span class="header-icon"><%= inline_svg 'wave.svg', class: 'wave-icon' %></span>
+			<span class = "header-name">User Flows</span>
+			<%end%>
+
+		</div>
 
 		<div class="nav-link push">
 			<%= link_to "Home", root_path, :class => current_class?(root_path) %>
