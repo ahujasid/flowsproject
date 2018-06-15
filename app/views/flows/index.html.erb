@@ -11,12 +11,15 @@
 		</div>
 
 		<div class="nav-link push">
-			<%= link_to "Home", root_path, :class => current_class?(root_path) %>
+			<%= link_to "https://twitter.com/smackmypixelsup", target: :_blank do %>
+			 <span class="inline-block text-light">Made with</span> 
+			 <%= inline_svg 'heart-grey.svg', class: 'heart-grey' %>
+			 <%= inline_svg 'heart-red.svg', class: 'heart-red' %>
+			 <span class = "inline-block-two text-light">by Siddharth</span>
+			 <%end%>
 		</div>
 
-		<div class="nav-link">
-			<%= link_to "About", root_path %>
-		</div>
+	
 	</div>
 	
 	<div class="content-container">
