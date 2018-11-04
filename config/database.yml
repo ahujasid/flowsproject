@@ -82,5 +82,5 @@ production:
   <<: *default
   database: flowsproject_production
   username: flowsproject
-  url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV["postgres://nnrgkbvxovgnwa:3afa4b20da9afd695828eeba594aaea3d167ac78476538236bfa98246a2b0659@ec2-50-17-250-38.compute-1.amazonaws.com:5432/d64sh88gl6bi5a"] %>
   password: 
