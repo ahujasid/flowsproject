@@ -30,7 +30,14 @@ class FlowsController < ApplicationController
     @flow = Flow.friendly.find(params[:id]) 
     @js_id = 0
     @go_to_id = 0
+    @nav_link_id = 49
     @cat_id_show = params[:q]
+
+    respond_to do |format|
+      format.js 
+      format.html
+    end
+
   end
 
   # GET /flows/new

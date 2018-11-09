@@ -14,6 +14,12 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
     <%= favicon_link_tag 'favicon.ico' %>
     <title>User Flows - Best design flows on the internet, curated for you.</title>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -27,10 +33,6 @@
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="User Flows">
     <meta itemprop="description" content="User Flows -  Best design flows from industry leaders, curated for you.">
-
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>

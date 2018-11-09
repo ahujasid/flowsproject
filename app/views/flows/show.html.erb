@@ -28,7 +28,8 @@
 
 		 <% navigation_array.each do |nav_element| %>
 			 <% @go_to_id += 1 %>
-			 <div class="flow-links"> <%= link_to nav_element, :anchor => "#{@go_to_id}" %></div>
+			 <% @nav_link_id +=1 %>
+			 <div class="flow-links" id= "<%= @nav_link_id %>" > <%= link_to nav_element, :anchor => "#{@go_to_id}", :remote => true %></div>
 		 <% end %>
 
 		</div>
