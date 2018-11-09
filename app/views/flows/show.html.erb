@@ -13,7 +13,7 @@
 
 		<span class="intro-head flex-two"><%=@flow.name %></span>
 
-		<div class="close-push-right"><%= link_to root_path do %>
+		<div class="close-push-right"><%= link_to "back", request.referer.present? ? request.referer : default_path do %>
 		<%= inline_svg 'close.svg', class: 'close-icon' %>
 		<% end %>
 	</div>

@@ -28,6 +28,7 @@ class FlowsController < ApplicationController
     @flow = Flow.friendly.find(params[:id]) 
     @js_id = 0
     @go_to_id = 0
+    @url = request.referer
   end
 
   # GET /flows/new
