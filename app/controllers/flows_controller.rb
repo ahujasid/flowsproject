@@ -16,6 +16,8 @@ class FlowsController < ApplicationController
       @categ_name = Category.find_by(id: params[:category_id]).name
     end
 
+    @url = request.referer
+
     respond_to do |format|
       format.js 
       format.html
@@ -28,7 +30,7 @@ class FlowsController < ApplicationController
     @flow = Flow.friendly.find(params[:id]) 
     @js_id = 0
     @go_to_id = 0
-    @url = request.referer
+    @cat_id_show = params[:q]
   end
 
   # GET /flows/new
