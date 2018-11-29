@@ -379,33 +379,36 @@ a:hover{
 
 .close-flow{
 	display: flex;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 96px;
 	align-items: center;
 	margin-bottom: 32px;
 	width: 100%;
+	transition: top 0.3s;
+	z-index: 3;
+	background: white;
 	/*position: sticky;
 	overflow: hidden;
 	background: white;
-	z-index: 3;
 	top: 0;*/
 }
 
 
 
 .empty-flex{
-	flex: 13;
+	flex: 17;
 }
 
 .flex-two{
-	flex: 58;
+	flex: 59;
 }
 
 
 
 .close-push-right{
-	flex: 2;
+	flex: 6;
 }
 
 .close-icon{
@@ -425,6 +428,7 @@ a:hover{
 	grid-template-columns: 12fr 60fr;
 	grid-template-rows: repeat(800px, 1fr);
 	grid-gap: 16px;
+	margin-top: 128px;
 }
 
 .flow-navigation{
@@ -505,7 +509,6 @@ a:hover{
 	line-height: 1.4;
 	font-size: 14px;
 }
-
 
 
 
@@ -738,6 +741,7 @@ display: block;
 .image-overlay{
 	display: none;
 }
+
 
 }
 
