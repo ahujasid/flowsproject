@@ -28,7 +28,7 @@ function testfunc(id_num) {
 var prevScrollpos = window.pageYOffset+128;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos + 1 > currentScrollPos) {
     document.getElementById("show-navbar").style.top = "0";
   } else {
     document.getElementById("show-navbar").style.top = "-96px";
