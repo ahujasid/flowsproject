@@ -25,7 +25,7 @@ function testfunc(id_num) {
    return false;
 };
 
-var prevScrollpos = window.pageYOffset+96;
+var prevScrollpos = window.pageYOffset+128;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -33,6 +33,6 @@ window.onscroll = function() {
   } else {
     document.getElementById("show-navbar").style.top = "-96px";
   }
-  console.log("scroll");
+  console.log(window.pageYOffset);
   prevScrollpos = currentScrollPos;
 }
