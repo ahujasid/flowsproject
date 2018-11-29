@@ -704,6 +704,11 @@ display: block;
 	align-items: center;
 	margin-bottom: 24px;
 	width: 100%;
+	background: white;
+	position: fixed;
+	transition: top 0.3s;
+	padding: 16px;
+	z-index: 3;
 }
 
 .close-push-right{
@@ -726,6 +731,7 @@ display: block;
 .flow-images-container{
 	display: grid;
 	grid-template-columns: 1fr;
+	margin-top: 104px;
 }
 
 .flow-image-with-text{
