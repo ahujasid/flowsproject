@@ -25,7 +25,7 @@ function testfunc(id_num) {
    return false;
 };
 
-var prevScrollpos = window.pageYOffset;
+var prevScrollpos = window.pageYOffset+96;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
