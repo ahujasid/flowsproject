@@ -379,33 +379,36 @@ a:hover{
 
 .close-flow{
 	display: flex;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 96px;
 	align-items: center;
 	margin-bottom: 32px;
 	width: 100%;
+	transition: top 0.3s;
+	z-index: 3;
+	background: white;
 	/*position: sticky;
 	overflow: hidden;
 	background: white;
-	z-index: 3;
 	top: 0;*/
 }
 
 
 
 .empty-flex{
-	flex: 13;
+	flex: 17;
 }
 
 .flex-two{
-	flex: 58;
+	flex: 59;
 }
 
 
 
 .close-push-right{
-	flex: 2;
+	flex: 6;
 }
 
 .close-icon{
@@ -425,6 +428,7 @@ a:hover{
 	grid-template-columns: 12fr 60fr;
 	grid-template-rows: repeat(800px, 1fr);
 	grid-gap: 16px;
+	margin-top: 128px;
 }
 
 .flow-navigation{
@@ -505,7 +509,6 @@ a:hover{
 	line-height: 1.4;
 	font-size: 14px;
 }
-
 
 
 
@@ -701,6 +704,11 @@ display: block;
 	align-items: center;
 	margin-bottom: 24px;
 	width: 100%;
+	background: white;
+	position: fixed;
+	transition: top 0.3s;
+	padding: 16px;
+	z-index: 3;
 }
 
 .close-push-right{
@@ -723,9 +731,14 @@ display: block;
 .flow-images-container{
 	display: grid;
 	grid-template-columns: 1fr;
+	margin-top: 104px;
 }
 
 .flow-image-with-text{
+	
+	width: 100%;
+	position: relative;
+	display: inline-block;
 	margin-bottom: 24px;
 	box-shadow: 0px 0px 1px rgba(0,0,0,0.16);
 }
@@ -737,6 +750,29 @@ display: block;
 
 .image-overlay{
 	display: none;
+}
+
+.flow-image-with-text:hover > .image-overlay{
+
+  /*---------TRANSITIONS-------*/
+	-webkit-transition: background-color 0.4s ease-out, color 0.4s ease-out;
+  -moz-transition: background-color 0.4s ease-out, color 0.4s ease-out;
+  -o-transition: background-color 0.4s ease-out, color 0.4s ease-out;
+	transition: background-color 0.4s ease-out, color 0.4s ease-out;
+	/*-----------------*/
+
+    position: absolute;
+    max-width: 100%;
+	display: block;
+	bottom: 16px;
+	left: 16px;
+	padding: 18px;
+	background-color: rgba(48,52,64,0.9);
+	color: rgba(255,255,255,1);
+	border-radius: 16px;
+	margin-right: 16px;
+	line-height: 1.4;
+	font-size: 12px;
 }
 
 }

@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
-    <title>UX Flows</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81723672-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-81723672-3');
+    </script>
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <title>User Flows - Best design flows on the internet, curated for you.</title>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="User Flows -  Best design flows from industry leaders, curated for you." />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="keywords" content="user, flow, flows, design, onboarding, source, ux ui, resources, journey, experience " />
+
+    <meta name="author" content="Siddharth Ahuja" />
+    <!--[if IE]><link rel="shortcut icon" href="/assets/favicon.png"><![endif]-->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="User Flows">
+    <meta itemprop="description" content="User Flows -  Best design flows from industry leaders, curated for you.">
   </head>
 
   <body>

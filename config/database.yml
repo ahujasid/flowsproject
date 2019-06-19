@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: flowsproject_production
-  username: flowsproject
-  password: <%= ENV['FLOWSPROJECT_DATABASE_PASSWORD'] %>
+  username: siddharth
+  url: <%= ENV["DATABASE_URL"] %>
+  password: 

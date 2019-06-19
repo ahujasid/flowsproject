@@ -1,7 +1,7 @@
 
 <% @flows.each do |flow| %>
 	<%#if flow.category_id != cat_id %>
-		<%= link_to show_flow_path(flow) do %>
+		<%= link_to show_flow_path(flow, :q => @categ_id) do %>
 
 		<div class="card">
 			<div class="img-bg" style="background-color: <%=flow.company.bgcolor%>">

@@ -16,3 +16,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+function testfunc(id_num) {
+   console.log(id_num);
+   var target_id = id_num - 49;
+   document.getElementById(target_id).scrollIntoView(true);
+   return false;
+};
+
+var prevScrollpos = window.pageYOffset+128;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos + 1 > currentScrollPos) {
+    document.getElementById("show-navbar").style.top = "0";
+  } else {
+    document.getElementById("show-navbar").style.top = "-96px";
+  }
+  console.log(window.pageYOffset);
+  console.log(prevScrollpos);
+  prevScrollpos = currentScrollPos;
+}

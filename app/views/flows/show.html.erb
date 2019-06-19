@@ -8,12 +8,12 @@
 
 <div class="main-container">
 
-	<div class="close-flow">
+	<div class="close-flow" id="show-navbar">
 		<div class="empty-flex"></div>
 
 		<span class="intro-head flex-two"><%=@flow.name %></span>
 
-		<div class="close-push-right"><%= link_to root_path do %>
+		<div class="close-push-right"><%= link_to root_path(:category_id => @cat_id_show) do %>
 		<%= inline_svg 'close.svg', class: 'close-icon' %>
 		<% end %>
 	</div>
@@ -28,7 +28,8 @@
 
 		 <% navigation_array.each do |nav_element| %>
 			 <% @go_to_id += 1 %>
-			 <div class="flow-links"> <%= link_to nav_element, :anchor => "#{@go_to_id}" %></div>
+			 <% @nav_link_id +=1 %>
+			 <div class="flow-links"> <a href="javascript:void(0)" onclick="javascript:testfunc(<%= @nav_link_id %>)" id= "<%= @nav_link_id %>" ><%= nav_element %></a></div>
 		 <% end %>
 
 		</div>
